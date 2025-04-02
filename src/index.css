@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+body {
+  background-color: #242424;
+  color: white;
+  margin: 2%;
+}
+
+.card{
+  max-width: 23vw;
+  padding: 1% ;
+  height: fit-content;
+  box-shadow: 1px 1px 4px lightblue;
+}
+.container{
+  display: flex;
+  gap: 34px;
+  flex-wrap: wrap;
+}
+
+#header{
+  display: flex;
+  padding: 12px 2%;
+  background-color: rgb(46, 46, 44);
+  color: white;
+}
+
