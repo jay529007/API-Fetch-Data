@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 
-// logic :  first fetching all values from api converting in jason
-//  passing in all in array
-// taking data through map
+// First, fetching all values from the API,
 
 function App() {
   const [cards, setCards] = useState([]);
@@ -11,8 +9,8 @@ function App() {
   // async
   const fetchData = async () => {
     let a = await fetch("https://jsonplaceholder.typicode.com/users"); //api
-    let data = await a.json();
-    setCards(data);
+    let data = await a.json(); //  converting them to JSON, 
+    setCards(data); // passing them into an array,
     // console.log(data);
   };
 
@@ -25,10 +23,12 @@ function App() {
       <Navbar />
       <div className="container">
         {cards.map((card) => {
-          return (
+          return ( 
+             //  retrieving the data using map
+             // displaying it.
             <div key={card.id} className="bg-blue-500 rounded-2xl  card">
               <h1 className="text-xl font-semibold uppercase">{card.name}</h1> <br />
-              <p>Company Name:{card.company.name}</p>
+              <p>Company Name:{card.company.name}</p>       
               <p>Email: {card.email} </p> <br />
               <span>Website: {card.website}</span> 
             </div>
